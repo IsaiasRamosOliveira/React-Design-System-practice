@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gray-100: #585865;
+
+    --dark-100: #2e2e38;
+    --dark-200: #191920;
+    --dark-300: #18181e;
+    --dark-400: #111115;
+    --dark-500: #0d0d10;
+
+    --purple-100: #6b6bff;
+    --purple-200: #b2baff;
+
+    --white100: #ffffff;
+  }
+}
+
+body {
+  height: 100vh;
+  @apply text-gray100;
+}
+
+@layer components {
+  .container {
+    @apply bg-dark400 
+      h-full 
+      grid 
+      md:grid-cols-[70px_240px_1fr] 
+      md:grid-rows-[60px_1fr];
+  }
+  .content {
+    @apply bg-red-500 
+        md:col-start-3 
+        md:col-end-4 
+        bg-dark400 
+        p-8;
+  }
+  .header {
+    @apply bg-yellow-500 
+      bg-dark400 
+      p-8;
+  }
+  .aside {
+    @apply bg-blue-500 
+        hidden 
+        md:block  
+        md:row-span-2 
+        bg-dark500 
+        p-8;
+  }
+  .menu {
+    @apply bg-purple-500 
+        md:row-span-2 
+        bg-dark500 
+        p-8;
+  }
+}

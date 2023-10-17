@@ -1,0 +1,47 @@
+.card {
+  @apply flex 
+    flex-col 
+    justify-between 
+    bg-dark300
+    min-w-[286px]
+    max-w-[300px]
+    h-[196px]
+    rounded-[10px]
+    text-white100;
+
+  .description {
+    @apply flex 
+      justify-between
+      rounded-[0px_0px_10px_10px] 
+      p-4
+      w-full;
+
+    .personal {
+      @apply flex 
+        gap-3;
+    }
+  }
+  .cover {
+    @apply relative;
+
+    .visibility {
+      @apply absolute 
+        z-10 
+        flex 
+        justify-between 
+        w-full 
+        p-4;
+
+      .display {
+        @apply flex gap-3;
+      }
+    }
+    .img {
+      @apply absolute 
+        rounded-[10px_10px_0px_0px] 
+        top-0 
+        bg-dark100 
+        z-0;
+    }
+  }
+}
